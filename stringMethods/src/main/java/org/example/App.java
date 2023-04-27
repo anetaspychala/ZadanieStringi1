@@ -19,21 +19,29 @@ public class App {
 //        String text = "Hello, World!";
 //        Character c = text.charAt(5);
 //        System.out.println(c);
+        String text = "anna";
+        palindrom(text);
     }
 // Iterate over a string with a numeric for
-        public static boolean palindrom(String text){
-        String text = "anna";
-        text = text.toLowerCase();
-        for (int i = 0; int j < text.length()-1; i < j; i++; j--) {
+        public static boolean palindrom (String text) {
+            text = text.toLowerCase();
+            int i = 0;
+
             Character character = text.charAt(i);
-            // System.out.println(character);
-            if(text.charAt(i)) != text.charAt(j); {
-                return false;
+            for ( i = 0;i<text.length()-1; i++){
+                for(int j = text.length() - 1;j>0;j--){
+                // System.out.println(character);
+
+                if ((text.charAt(i)) !=text.charAt(j))
+                {
+                    return false;
+                }
+//            else{
+//                    return true;
+//                }
             }
-            return true;
         }
-
-
+            return true;
 //            for (int i = 0; j=str.length() - 1; i<j; i++, j--){
 //                    if(str.charAt(i) !=str.charAt(j)){
 //                        return false;
