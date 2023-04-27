@@ -19,44 +19,40 @@ public class App {
 //        String text = "Hello, World!";
 //        Character c = text.charAt(5);
 //        System.out.println(c);
-        String text = "anna";
+        String text = "Anna";
         palindrom(text);
     }
 // Iterate over a string with a numeric for
-        public static boolean palindrom (String text) {
-            text = text.toLowerCase();
-            int i = 0;
+public static void palindrom (String text) {
+    text = text.toLowerCase();
+    int i = 0;
+    boolean result=false;
 
-            Character character = text.charAt(i);
-            for ( i = 0;i<text.length()-1; i++){
-                for(int j = text.length() - 1;j>0;j--){
-                // System.out.println(character);
 
-                if ((text.charAt(i)) !=text.charAt(j))
-                {
-                    return false;
-                }
-//            else{
-//                    return true;
-//                }
+    for ( i = 0;i<text.length()-1; i++){
+        for(int j = text.length() - 1;j>0;j--){
+
+            if ((text.charAt(i))!=text.charAt(j)) {
+                result = false;
+            } else{
+                result =  true;
+
             }
-        }
-            return true;
-//            for (int i = 0; j=str.length() - 1; i<j; i++, j--){
-//                    if(str.charAt(i) !=str.charAt(j)){
-//                        return false;
-
-        //        }
-        //    }
-        //    return true;
-
-
-// Iterate over a string with an iterative for
-//        for (Character character : text.toCharArray()) {
-//            System.out.println(character);
-
 
         }
+    }
+
+    if (result==true){
+        String isPalindrom = String.format("%s is a palindrome",text);
+        System.out.println(isPalindrom);
+    }
+    else {
+        String notAPalindrom = String.format("%s is NOT a palindrome",text);
+        System.out.println(notAPalindrom);
+    }
+
+
+}
 
     }
 
